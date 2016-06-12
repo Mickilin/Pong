@@ -9,9 +9,9 @@ function setup() {
 function draw() {
  drawBack();
  if (keyCode === UP_ARROW) {
-    posx = posx + speed;
-  } else if (keyCode === DOWN_ARROW) {
     posx = posx - speed;
+  } else if (keyCode === DOWN_ARROW) {
+    posx = posx + speed;
   }
  drawPlayer();
  
@@ -26,11 +26,8 @@ function drawBack(){
 }
 
 function drawPlayer(){
-  
-  
-  
   keyCode = LEFT_ARROW;
   rect(975,300+posx,10,100);
-  
+
 }
 
