@@ -1,10 +1,7 @@
 # Convex Polygon
 
-One Paragraph of project description goes here
+Solució del 2 problema de LP, consta de una clase polygons.py que ens dona les funcions per crear i modificar poligons y un bot.py que ens permet interactuar amb aquesta funcio a traves de telegram
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
