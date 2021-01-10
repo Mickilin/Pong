@@ -3,83 +3,67 @@
 Solució del 2 problema de LP, consta de una clase polygons.py que ens dona les funcions per crear i modificar poligons y un bot.py que ens permet interactuar amb aquesta funcio a traves de telegram
 
 
-### Prerequisites
+### Instalació
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Primer haurem d'instalar Python3 amb la comanda
 
 ```
-Give the example
+$ sudo apt-get update
+$ sudo apt-get install python3.8 python3-pip
+```
+I les llibreries Pillow per crear imatges i python-telegram-bot per interactuar amb Telegram
+
+```
+$ sudo pip install --upgrade Pillow
+$ pip install python-telegram-bot --upgrade
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
+## Clase Poligon
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+## Bot Telegram
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+Primer de tot per interactuar amb Python necessitem un acces token que identifica el nostre bot
 
 ```
-Give an example
+1 - Visiteu el @BotFather.
+
+2 -Useu la comanda /newbot i doneu la informació que us demana (nom complet i nom d’usari del bot, que ha d’acabar amb bot).
+
+3 -Deseu en un fitxer token.txt el vostre access token, que té un aspecte com ara U10201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw.
 ```
+Amb el token ja podem executar el bot i utilitzar les seguents funcions:
 
-## Deployment
+-/nou nom (x1,y1) (x2,y2) ... (xn,yn) (r,g,b)* : Crea un nou poligon. 
+    Tots els parametres estan separats per espais.
+    El primer parametre sempre es el nom 
+    Les coordenades (X,Y) s'escriuen sense espai ((x,y) - correcte, (x, y) - incorrecte)
+    Si es vol definir el color amb que es pintara ha de ser l'ultim parametre en format (r,g,b) seguint les mismes normes que un punt
 
-Add additional notes about how to deploy this on a live system
+-/info nom: Retorna els punts que defineixen el poligon y el color del poligon
 
-## Built With
+-/area nom : Calcula l'area del poligon
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+-/perimetre nom : Calcula el perimetre del poligon
 
-## Contributing
+-/arestes nom : Calcula el nombre d'arestes del poligon
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+-/vertex nom : Calcula el nombre de vertes del poligon
 
-## Versioning
+-/dintre nom (x,y) : Calcula si el punt (x,y) esta dintre del poligon amb el nom "nom"
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+-/dintre_poly nom1 nom2 : Calcula si el poligon "nom2" esta dintre de "nom1"
 
-## Authors
+-/centroid nom : Calcula el centroide del poligon "nom
+ 
+-/unio nom1 nom2 : Calcula els punts del poligon definit per la unio dels poligons "nom1" i "nom2"
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+-/interseccio nom1 nom2 : Calcula els punts del poligon definit per la intersecio dels poligons "nom1" i "nom2"
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+-/box nom : Calcula la bounding box del poligon "nom"
 
-## License
+-/dibux nom1 nom2 ... nom_n : Dibuixa els poligons en els parametres en una imatge 400x400.
+    Els poligons es dibuixen en el mateix ordre que els hem pasat, primer es dibuixa nom1 ,despres a sobre nom2
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
