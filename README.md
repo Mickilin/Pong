@@ -35,35 +35,85 @@ Primer de tot per interactuar amb Python necessitem un acces token que identific
 ```
 Amb el token ja podem executar el bot i utilitzar les seguents funcions:
 
--/nou nom (x1,y1) (x2,y2) ... (xn,yn) (r,g,b)* : Crea un nou poligon. 
-    Tots els parametres estan separats per espais.
-    El primer parametre sempre es el nom 
-    Les coordenades (X,Y) s'escriuen sense espai ((x,y) - correcte, (x, y) - incorrecte)
-    Si es vol definir el color amb que es pintara ha de ser l'ultim parametre en format (r,g,b) seguint les mismes normes que un punt
+### Nou
+Crea un nou poligon. 
+Tots els parametres estan separats per espais.
+El primer parametre sempre es el nom 
+Les coordenades (X,Y) s'escriuen sense espai ((x,y) - correcte, (x, y) - incorrecte)
+Si es vol definir el color amb que es pintara ha de ser l'ultim parametre en format (r,g,b) seguint les mismes normes que un punt
+```
+/nou nom (x1,y1) (x2,y2) ... (xn,yn) (r,g,b)* : 
+```
+### Info
+ Retorna els punts que defineixen el poligon y el color del poligon
+ ```
+/info nom:
+```
 
--/info nom: Retorna els punts que defineixen el poligon y el color del poligon
+### Area
+Calcula l'area del poligon
+```
+/area nom : Calcula l'area del poligon
+```
 
--/area nom : Calcula l'area del poligon
+### Perimetre
+Calcula el perimetre del poligon
+```
+/perimetre nom 
+```
 
--/perimetre nom : Calcula el perimetre del poligon
+### Arestes
+Calcula el nombre d'arestes del poligon
+```
+/arestes nom 
+```
 
--/arestes nom : Calcula el nombre d'arestes del poligon
+### Vertex
+Calcula el nombre de vertes del poligon
+```
+/vertex nom 
+```
 
--/vertex nom : Calcula el nombre de vertes del poligon
+### Dintre punt
+Calcula si el punt (x,y) esta dintre del poligon amb el nom "nom"
+```
+/dintre nom (x,y) 
+```
 
--/dintre nom (x,y) : Calcula si el punt (x,y) esta dintre del poligon amb el nom "nom"
+### Dintre poly
+Calcula si el poligon "nom2" esta dintre de "nom1"
+```
+/dintre_poly nom1 nom2 
+```
 
--/dintre_poly nom1 nom2 : Calcula si el poligon "nom2" esta dintre de "nom1"
+### Centroid
+Calcula el centroide del poligon "nom"
+```
+/centroid nom 
+```
 
--/centroid nom : Calcula el centroide del poligon "nom
- 
--/unio nom1 nom2 : Calcula els punts del poligon definit per la unio dels poligons "nom1" i "nom2"
+ ### Unio
+ Calcula els punts del poligon definit per la unio dels poligons "nom1" i "nom2"
+ ```
+-/unio nom1 nom2  
+```
 
--/interseccio nom1 nom2 : Calcula els punts del poligon definit per la intersecio dels poligons "nom1" i "nom2"
+### Interseccio
+Calcula els punts del poligon definit per la intersecio dels poligons "nom1" i "nom2"
+```
+/interseccio nom1 nom2 
+```
 
--/box nom : Calcula la bounding box del poligon "nom"
+### Box
+Calcula la bounding box del poligon "nom"
+```
+/box nom 
+```
 
--/dibux nom1 nom2 ... nom_n : Dibuixa els poligons en els parametres en una imatge 400x400.
-    Els poligons es dibuixen en el mateix ordre que els hem pasat, primer es dibuixa nom1 ,despres a sobre nom2
-
+### Dibuix
+Dibuixa els poligons en els parametres en una imatge 400x400.
+Els poligons es dibuixen en el mateix ordre que els hem pasat, primer es dibuixa nom1 ,despres a sobre nom2
+```
+/dibux nom1 nom2 ... nom_n 
+```
 
