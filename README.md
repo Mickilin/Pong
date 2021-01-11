@@ -20,7 +20,12 @@ $ pip install python-telegram-bot --upgrade
 
 ## Clase Poligon
 
-Explain how to run the automated tests for this system
+La clase Poligon consta de una llista de tuples (cada tupla representa un punt amb les coordenades (x,y)) y una tupla de longitud 3 per representar el color en formant RGB. El parametre del color es opcional y en cas de que no es pasi el valor per defecte es el color negre 
+
+```
+Polygon([(100,100),(200,100),(200,200),(100,200)]) # Cuadrat de 100*100 de color negre
+
+Polygon([(300,100),(400,100),(400,200),(300,200)]) # Cuadrat de 100*100 de color vermell
 
 ## Bot Telegram
 
