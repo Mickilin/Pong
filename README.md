@@ -33,20 +33,48 @@ A l'hora de crear un poligon la funcio constructora comprova que aquest sigui co
 
 La clase Polygon ens dona les seguents funcions
 
-### getPuns
+### getPunts
 Retorna el llistat de punts del poligon
+```
+poly1.getPunts()
+```
+
 ### getColor
 Retorna el color en format RGB del poligon
+```
+poly1.getColor()
+```
+
 ### Perimeter
 Retorna el perimetre del poligon calculant el vector entre tots els punts
+```
+poly1.Perimeter()
+```
+
 ### Area
 Retorna la area del poligon amb la formula de la meitat del sumatori dels productes vectorials de cada punt
+```
+poly1.Area()
+```
+
 ### Vertex
 Retorna el numero de vertex del poligon
+```
+poly1.calVertex()
+```
+
 ### Edges
 Retorna el numero de arestes del poligon
+```
+poly1.calEdges()
+```
+
 ### Regular
 Retorna True si tots els costats tenen la mateixa longitud o Fals en cas contrari
+```
+poly1.Regular()
+```
+
 ### Inside
 Retorna si True si el poligon pasat com a parametre(poly2) esta dintre del poligon(poly1). Si volem comprovar si un punt esta dintre o fora de un poligon podem crear un poligon de un sol punt directament en el parametre
 ```
@@ -57,7 +85,7 @@ poly1.Inside(Polygon([(50,50)])) #Punt(50,50) dintre de poly1?
 ### Centroid
 Calcula el centroide del poligon amb la formula:
 
-![Alt text](07.8-formula5.png)
+![Alt text](./07.8-formula5.png)
 ```
 poly1.Centroid()
 ```
