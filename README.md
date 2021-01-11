@@ -3,7 +3,7 @@
 Solució del 2 problema de LP, consta de una clase polygons.py que ens dona les funcions per crear i modificar poligons y un bot.py que ens permet interactuar amb aquesta funcio a traves de telegram
 
 
-### Instalació
+## Instalació
 
 Primer haurem d'instalar Python3 amb la comanda
 
@@ -23,10 +23,44 @@ $ pip install python-telegram-bot --upgrade
 La clase Poligon consta de una llista de tuples (cada tupla representa un punt amb les coordenades (x,y)) y una tupla de longitud 3 per representar el color en formant RGB. El parametre del color es opcional y en cas de que no es pasi el valor per defecte es el color negre 
 
 ```
-Polygon([(100,100),(200,100),(200,200),(100,200)]) # Cuadrat de 100*100 de color negre
+poly1 = Polygon([(100,100),(200,100),(200,200),(100,200)]) # Cuadrat de 100*100 de color negre
 
-Polygon([(300,100),(400,100),(400,200),(300,200)]) # Cuadrat de 100*100 de color vermell
+poly2 = Polygon([(300,100),(400,100),(400,200),(300,200)]) # Cuadrat de 100*100 de color vermell
 ```
+
+La clase Polygon tambe admet el poligon buit(sense punts), punts(un punt) i linies(2 punts). 
+A l'hora de crear un poligon la funcio constructora comprova que aquest sigui convex comprovant que el producte escalar a cada punt tingui el mateix signe, i que no sigui complex.
+
+La clase Polygon ens dona les seguents funcions
+
+### getPuns
+Retorna el llistat de punts del poligon
+### getColor
+Retorna el color en format RGB del poligon
+### Perimeter
+Retorna el perimetre del poligon calculant el vector entre tots els punts
+### Area
+Retorna la area del poligon amb la formula de la meitat del sumatori dels productes vectorials de cada punt
+### Vertex
+Retorna el numero de vertex del poligon
+### Edges
+Retorna el numero de arestes del poligon
+### Regular
+Retorna True si tots els costats tenen la mateixa longitud o Fals en cas contrari
+### Inside
+Retorna si True si el poligon pasat com a parametre(poly2) esta dintre del poligon(poly1). Si volem comprovar si un punt esta dintre o fora de un poligon podem crear un poligon de un sol punt directament en el parametre
+```
+poly1.Inside(poly2) #poly2 dintre de poly1?
+poly1.Inside(Polygon([(50,50)])) #Punt(50,50) dintre de poly1?
+```
+### Centroid
+Calcula el centroide del poligon amb la formula:
+
+![Alt text](http://pier.guillen.com.mx/algorithms/07-geometricos/07.8-formula5.png)
+
+### Intersection
+### Unio
+### Draw
 
 ## Bot Telegram
 
