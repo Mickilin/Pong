@@ -51,16 +51,35 @@ Retorna True si tots els costats tenen la mateixa longitud o Fals en cas contrar
 Retorna si True si el poligon pasat com a parametre(poly2) esta dintre del poligon(poly1). Si volem comprovar si un punt esta dintre o fora de un poligon podem crear un poligon de un sol punt directament en el parametre
 ```
 poly1.Inside(poly2) #poly2 dintre de poly1?
+
 poly1.Inside(Polygon([(50,50)])) #Punt(50,50) dintre de poly1?
 ```
 ### Centroid
 Calcula el centroide del poligon amb la formula:
 
-![Alt text](http://pier.guillen.com.mx/algorithms/07-geometricos/07.8-formula5.png)
+![Alt text](07.8-formula5.png)
+```
+poly1.Centroid()
+```
 
 ### Intersection
+Calcula la interseccio de poly1 amb poly2. La interseccio es calcula amb el conjunt dels punts de poly2 dintre de poly1, el punts de poly1 dintre de poly2 i els punts on es creuen els dos poligons, per acabar organitzarem aquest punts per a que compleixin les condicions de ser convexos i no complexos
+```
+poly1.Intersection(poly2)
+```
+
 ### Unio
+Calcula la unio de poly1 amb poly2. La unio es calcula a partir de eliminar els punts de poly2 dintre de poly1 i eliminant els punts de poly1 dintre de poly2. De aquesta forma eliminem les interseccions entre poly1 i poly2 que per definicio no serien convexes.
+```
+poly1.Unio(poly2)
+```
+
 ### Draw
+Crea una imatge "img.png" de 400x400 on pintarem tots els poligons que li pasem com a parametre a la funcio
+```
+Polygon([]).DrawNorm([poly1,poly2])
+
+```
 
 ## Bot Telegram
 
