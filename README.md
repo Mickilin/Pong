@@ -26,6 +26,7 @@ La clase Poligon consta de una llista de tuples (cada tupla representa un punt a
 Polygon([(100,100),(200,100),(200,200),(100,200)]) # Cuadrat de 100*100 de color negre
 
 Polygon([(300,100),(400,100),(400,200),(300,200)]) # Cuadrat de 100*100 de color vermell
+```
 
 ## Bot Telegram
 
